@@ -6,3 +6,6 @@
 -- To change this template use File | Settings | File Templates.
 --
 
+os.execute("resolution 5 1")
+print("Hello")
+os.sleep(2)
