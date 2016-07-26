@@ -15,10 +15,10 @@ print(m.isOpen(123)) -- true
 
 while true do
     local _, _, _, _, _, msg = event.pull("modem_message")
-    print("msg : " .. msg)
+    if msg == "start_display" then
+        display()
+        end
 end
-
-
 
 
 function display()
