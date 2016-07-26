@@ -14,12 +14,8 @@ m.open(123)
 print(m.isOpen(123)) -- true
 
 while true do
-    local event, side, frequency, replyFrequency, message, distance = event.pull("modem_message")
-    print("Message received from the open modem on the "..side.." side of this computer.")
-    print("Frequency: "..frequency)
-    print("Requested reply frequency: "..replyFrequency)
-    print("Distance: "..distance)
-    print("Message is as follows: "..message)
+    local _, _, _, _, _, msg = event.pull("modem_message")
+    print("msg : " .. msg)
 end
 
 
